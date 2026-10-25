@@ -1,0 +1,23 @@
+{
+  "name": "PRANION | Harmonização Energética Integrativa",
+  "short_name": "Pranion",
+  "description": "Harmonização energética integrativa a distância. Radiestesia, radiônica e alinhamento do campo sutil.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a1411",
+  "theme_color": "#0a1411",
+  "icons": [
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

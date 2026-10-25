@@ -1,0 +1,6 @@
+{
+  "name": "Pranion - Mesa Radiônica e Harmonização para Pets",
+  "description": "Harmonização energética personalizada à distância para cães e gatos. Mais equilíbrio, bem-estar e serenidade para o seu pet com a Pranion.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
