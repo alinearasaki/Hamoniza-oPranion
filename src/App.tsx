@@ -7,9 +7,9 @@ import { HowItWorksSection } from './components/HowItWorksSection';
 import { IntentionsSection } from './components/IntentionsSection';
 import { DifferentialsSection } from './components/DifferentialsSection';
 import { PackagesSection } from './components/PackagesSection';
-import { PackageComparisonSection } from './components/PackageComparisonSection';
 import { VideoShowcaseSection } from './components/VideoShowcaseSection';
 import { AboutAlineSection } from './components/AboutAlineSection';
+import { PackageComparisonSection } from './components/PackageComparisonSection';
 import { InvitationAndChoiceSection } from './components/InvitationAndChoiceSection';
 import { FaqSection } from './components/FaqSection';
 import { SupportAndLegalSection } from './components/SupportAndLegalSection';
@@ -19,9 +19,9 @@ import { PlanTier } from './types';
 
 export function App() {
   const [checkoutModalOpen, setCheckoutModalOpen] = useState(false);
-  const [selectedPlanForModal, setSelectedPlanForModal] = useState<PlanTier>('completo');
+  const [selectedPlanForModal, setSelectedPlanForModal] = useState<PlanTier>('essencial');
 
-  const handleOpenCheckout = (plan: PlanTier = 'completo') => {
+  const handleOpenCheckout = (plan: PlanTier = 'essencial') => {
     setSelectedPlanForModal(plan);
     setCheckoutModalOpen(true);
   };
@@ -39,37 +39,37 @@ export function App() {
         {/* Bloco 2: Fundo Claro Acolhedor (Alto Contraste) */}
         <PainAndNeedsSection />
 
-        {/* Bloco 3: Fundo Verde Floresta Profundo */}
+        {/* Bloco 3: Fundo Verde Floresta Profundo (Metodologia e os 4 pilares) */}
         <ProposalSection />
 
-        {/* Bloco 4: Fundo Claro Pérola */}
+        {/* Bloco 4: Fundo Claro Pérola (As 4 Etapas) */}
         <HowItWorksSection />
 
-        {/* Bloco 5: Fundo Místico Esmeralda */}
+        {/* Bloco 5: Fundo Místico Esmeralda (O que buscar na experiência) */}
         <IntentionsSection />
 
-        {/* Bloco 6: Fundo Areia / Linho Claro */}
+        {/* Bloco 6: Fundo Areia / Linho Claro (Diferenciais Pranion) */}
         <DifferentialsSection />
 
-        {/* Bloco 7: Fundo Escuro de Alta Conversão com os Pacotes */}
+        {/* Bloco 7: Fundo Escuro de Alta Conversão com os Pacotes (Essencial & Master) */}
         <PackagesSection onOpenCheckout={handleOpenCheckout} />
 
-        {/* Bloco 8: Fundo Branco com a Matriz de Comparação (Completo vs Master) */}
-        <PackageComparisonSection />
-
-        {/* Bloco 9: Fundo Slate Emerald com o Vídeo da Apresentação */}
+        {/* Bloco 8: Fundo Slate Emerald com o Vídeo da Apresentação da Criadora */}
         <VideoShowcaseSection />
 
-        {/* Bloco 10: Fundo Linho Acolhedor Sobre a Aline */}
+        {/* Bloco 9: Fundo Linho Acolhedor Sobre a Aline Augusta Arasaki */}
         <AboutAlineSection />
 
-        {/* Blocos 11, 13, 15, 16: Convite Consciente & Sem Pressa */}
+        {/* Bloco 10: Fundo Branco com a Matriz de Comparação (Separado do Bloco 7, refrescando a decisão) */}
+        <PackageComparisonSection />
+
+        {/* Bloco 11: Convite Consciente, Liberdade de Escolha & Sem Pressa */}
         <InvitationAndChoiceSection />
 
         {/* Bloco 12: Fundo Claro com Perguntas Frequentes */}
         <FaqSection />
 
-        {/* Blocos 17 & 18: Suporte, Acessibilidade, Disclaimer e Rodapé */}
+        {/* Bloco 13: Garantia Incondicional de 7 Dias, Acessibilidade e Rodapé */}
         <SupportAndLegalSection />
       </main>
 

@@ -1,4 +1,4 @@
-export type PlanTier = 'completo' | 'vip_master';
+export type PlanTier = 'essencial' | 'vip_master';
 
 export interface PlanFeature {
   title: string;

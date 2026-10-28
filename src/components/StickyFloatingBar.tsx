@@ -31,7 +31,7 @@ export const StickyFloatingBar: React.FC<StickyFloatingBarProps> = ({ onOpenChec
         
         <div className="hidden sm:flex items-center gap-2 text-stone-200 text-xs font-light">
           <Sparkles className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
-          <span>Harmonização Energética a Distância • Pacotes a partir de 3x R$ 55,00 ou R$ 165 à vista</span>
+          <span>Harmonização Energética a Distância • Pacotes a partir de 3x R$ 64,17 ou R$ 182,88 à vista</span>
         </div>
 
         <div className="flex items-center justify-between w-full sm:w-auto gap-2">

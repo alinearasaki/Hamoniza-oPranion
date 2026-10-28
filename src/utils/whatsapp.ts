@@ -29,9 +29,9 @@ export function getWhatsAppLink(plan?: PlanTier, customMessage?: string): string
   if (customMessage) {
     message = customMessage;
   } else if (plan === 'vip_master') {
-    message = 'Olá Aline! Gostaria de agendar o Pacote MASTER de Harmonização Energética (R$ 230,00) da Pranion e consultar as datas disponíveis na agenda.';
-  } else if (plan === 'completo') {
-    message = 'Olá Aline! Gostaria de agendar o Pacote COMPLETO de Harmonização Energética (R$ 165,00) da Pranion e consultar as datas disponíveis na agenda.';
+    message = 'Olá Aline! Gostaria de agendar o Pacote MASTER de Harmonização Energética (R$ 256,30 à vista com 5% de desconto ou 3x de R$ 89,67) da Pranion e consultar as datas disponíveis na agenda.';
+  } else if (plan === 'essencial') {
+    message = 'Olá Aline! Gostaria de agendar o Pacote ESSENCIAL de Harmonização Energética (R$ 182,88 à vista com 5% de desconto ou 3x de R$ 64,17) da Pranion e consultar as datas disponíveis na agenda.';
   } else {
     message = 'Olá Aline! Conheci a Pranion e gostaria de tirar dúvidas sobre os pacotes de Harmonização Energética Integrativa e saber as datas disponíveis.';
   }
@@ -45,16 +45,16 @@ export function getWhatsAppLink(plan?: PlanTier, customMessage?: string): string
  */
 export function openWhatsApp(plan?: PlanTier, customMessage?: string) {
   const isMaster = plan === 'vip_master';
-  const isCompleto = plan === 'completo';
+  const isEssencial = plan === 'essencial';
 
   trackMetaPixel('Contact', {
     content_name: isMaster
       ? 'Pacote Master de Harmonização'
-      : isCompleto
-      ? 'Pacote Completo de Harmonização'
+      : isEssencial
+      ? 'Pacote Essencial de Harmonização'
       : 'Atendimento Geral Pranion',
     content_category: 'Harmonizacao Energetica Integrativa',
-    value: isMaster ? 230.0 : isCompleto ? 165.0 : 0.0,
+    value: isMaster ? 256.30 : isEssencial ? 182.88 : 0.0,
     currency: 'BRL',
   });
 

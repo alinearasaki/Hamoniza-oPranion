@@ -9,7 +9,7 @@ interface PackagesSectionProps {
 }
 
 export const PackagesSection: React.FC<PackagesSectionProps> = ({ onOpenCheckout }) => {
-  const completo = PLANS.completo;
+  const essencial = PLANS.essencial;
   const master = PLANS.vip_master;
 
   return (
@@ -35,50 +35,51 @@ export const PackagesSection: React.FC<PackagesSectionProps> = ({ onOpenCheckout
           
           <div className="inline-flex items-center gap-2 text-xs text-emerald-400/90 bg-emerald-950/50 px-4 py-2 rounded-full border border-emerald-900/60 mt-2">
             <CreditCard className="w-3.5 h-3.5 text-emerald-400" />
-            <span>Pagamento parcelado em até 3x no cartão ou à vista no PIX</span>
+            <span>5% de desconto à vista no PIX ou em até 3x sem juros no cartão</span>
           </div>
         </div>
 
         {/* 2 Main Packages Cards */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto mb-14">
           
-          {/* Card 1: PACOTE COMPLETO DE HARMONIZAÇÃO */}
+          {/* Card 1: PACOTE ESSENCIAL DE HARMONIZAÇÃO */}
           <div className="p-7 sm:p-9 rounded-3xl bg-[#0d1815] border border-stone-800 flex flex-col justify-between hover:border-emerald-500/40 transition-all shadow-xl relative">
             <div>
               <div className="flex items-center justify-between mb-3">
                 <span className="text-xs uppercase tracking-wider text-stone-400 font-light">
-                  Experiência Ampliada
+                  Harmonização Fundamental
                 </span>
                 <span className="text-xs font-light text-emerald-400 bg-emerald-950/80 px-2.5 py-1 rounded-full border border-emerald-500/30">
-                  {completo.badge}
+                  {essencial.badge}
                 </span>
               </div>
 
               <h3 className="text-2xl sm:text-3xl font-light text-stone-100 mb-2 font-serif-title">
-                {completo.title}
+                {essencial.title}
               </h3>
 
               <p className="text-xs sm:text-sm text-emerald-400/90 font-light mb-3">
-                {completo.subtitle}
+                {essencial.subtitle}
               </p>
 
               <p className="text-xs sm:text-sm text-stone-300/80 font-light leading-relaxed mb-6">
-                {completo.description}
+                {essencial.description}
               </p>
 
               {/* Price Box */}
               <div className="p-6 rounded-2xl bg-stone-950/80 border border-stone-800/90 mb-7">
                 <span className="text-xs text-stone-400 line-through block">
-                  De {completo.originalPrice}
+                  De {essencial.originalPrice}
                 </span>
                 <div className="flex items-baseline gap-2 mt-1">
                   <span className="text-xs text-stone-400 font-light">por</span>
                   <span className="text-3xl sm:text-4xl font-light text-emerald-400">
-                    {completo.promotionalPrice}
+                    {essencial.promotionalPrice}
                   </span>
+                  <span className="text-xs text-stone-400 font-light">à vista (PIX 5% off)</span>
                 </div>
-                <span className="text-xs text-stone-400 font-light block mt-1">
-                  ou em até 3x de R$ 55,00 no cartão ou via PIX
+                <span className="text-xs text-stone-400 font-light block mt-1.5">
+                  ou em até <strong>3x de R$ 64,17</strong> no cartão
                 </span>
               </div>
 
@@ -89,7 +90,7 @@ export const PackagesSection: React.FC<PackagesSectionProps> = ({ onOpenCheckout
                 </h4>
 
                 <div className="space-y-3.5">
-                  {completo.includes.map((inc, i) => (
+                  {essencial.includes.map((inc, i) => (
                     <div key={i} className="flex items-start gap-3">
                       <div className="w-5 h-5 rounded-full bg-emerald-950 border border-emerald-500/40 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5">
                         <Check className="w-3 h-3 stroke-[2.5]" />
@@ -110,7 +111,7 @@ export const PackagesSection: React.FC<PackagesSectionProps> = ({ onOpenCheckout
               {/* Extra Included */}
               <div className="p-3.5 rounded-xl bg-stone-900/60 border border-stone-800/80 mb-6 text-xs text-stone-300 font-light flex items-center gap-2">
                 <Sparkles className="w-4 h-4 text-emerald-400 shrink-0" />
-                <span>{completo.extraIncluded}</span>
+                <span>{essencial.extraIncluded}</span>
               </div>
 
             </div>
@@ -118,16 +119,16 @@ export const PackagesSection: React.FC<PackagesSectionProps> = ({ onOpenCheckout
             {/* CTA & Disclaimer */}
             <div className="pt-4 border-t border-stone-800">
               <button
-                id="cta-pacote-completo"
-                onClick={() => openWhatsApp('completo')}
+                id="cta-pacote-essencial"
+                onClick={() => openWhatsApp('essencial')}
                 className="w-full cursor-pointer flex items-center justify-center gap-2 py-3.5 px-6 rounded-xl bg-stone-800 hover:bg-emerald-600 text-stone-100 hover:text-white text-xs sm:text-sm font-medium transition-all shadow-md active:scale-98"
               >
-                <span>{completo.ctaText}</span>
+                <span>{essencial.ctaText}</span>
                 <ArrowRight className="w-4 h-4" />
               </button>
 
               <p className="text-center text-[11px] text-stone-400 font-light mt-3 leading-relaxed">
-                {completo.disclaimer}
+                {essencial.disclaimer}
               </p>
             </div>
           </div>
@@ -172,9 +173,10 @@ export const PackagesSection: React.FC<PackagesSectionProps> = ({ onOpenCheckout
                   <span className="text-3xl sm:text-4xl font-light text-emerald-300">
                     {master.promotionalPrice}
                   </span>
+                  <span className="text-xs text-stone-300 font-light">à vista (PIX 5% off)</span>
                 </div>
-                <span className="text-xs text-emerald-400/90 font-light block mt-1">
-                  ou em até 3x de R$ 76,67 no cartão ou via PIX
+                <span className="text-xs text-emerald-400/90 font-light block mt-1.5">
+                  ou em até <strong>3x de R$ 89,67</strong> no cartão
                 </span>
               </div>
 

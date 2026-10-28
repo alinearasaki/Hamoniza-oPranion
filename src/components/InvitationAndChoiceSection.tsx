@@ -42,7 +42,7 @@ export const InvitationAndChoiceSection: React.FC = () => {
                 <span>Sua tranquilidade também importa</span>
               </div>
               <p className="text-xs sm:text-sm text-stone-300 font-light leading-relaxed">
-                Acreditamos que a confiança começa com informações claras. Antes de contratar, você poderá conhecer o conteúdo do pacote, as condições de pagamento, o funcionamento do atendimento e o canal de suporte.
+                Acreditamos que a confiança começa com informações claras. Antes de contratar, você poderá conhecer o conteúdo de cada pacote, as condições de pagamento e a garantia incondicional de 7 dias.
               </p>
             </div>
 

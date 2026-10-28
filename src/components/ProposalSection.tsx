@@ -1,11 +1,11 @@
 import React from 'react';
-import { Compass, Sparkles, Shield, WifiOff, FileText, CheckCircle2, MessageCircle } from 'lucide-react';
+import { Compass, Sparkles, Shield, WifiOff, FileText, CheckCircle2, MessageCircle, Layers } from 'lucide-react';
 import { openWhatsApp } from '../utils/whatsapp';
 
 export const ProposalSection: React.FC = () => {
   return (
     <section id="proposta" className="w-full bg-[#0f1f1a] text-stone-100 py-18 md:py-24 border-b border-stone-800">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-14">
@@ -22,57 +22,78 @@ export const ProposalSection: React.FC = () => {
           </p>
         </div>
 
-        {/* Core Pillars Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+        {/* 4 Pillars Grid (Updated with separate boxes for Limpeza/Alinhamento and Devolutiva) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           
-          <div className="p-7 rounded-3xl bg-[#142620] border border-emerald-900/40 shadow-lg hover:border-emerald-500/40 transition-all flex flex-col justify-between">
-            <div className="space-y-4">
-              <div className="w-12 h-12 rounded-2xl bg-emerald-950/80 border border-emerald-500/30 text-emerald-400 flex items-center justify-center">
-                <Compass className="w-6 h-6" />
+          {/* Card 1 */}
+          <div className="p-6 rounded-3xl bg-[#142620] border border-emerald-900/40 shadow-lg hover:border-emerald-500/40 transition-all flex flex-col justify-between">
+            <div className="space-y-3">
+              <div className="w-11 h-11 rounded-2xl bg-emerald-950/80 border border-emerald-500/30 text-emerald-400 flex items-center justify-center">
+                <Compass className="w-5 h-5" />
               </div>
-              <h3 className="text-xl font-light text-stone-100">
+              <h3 className="text-lg font-light text-stone-100">
                 Radiestesia & Radiônica
               </h3>
-              <p className="text-sm text-stone-300 font-light leading-relaxed">
+              <p className="text-xs sm:text-sm text-stone-300 font-light leading-relaxed">
                 A Pranion reúne práticas de radiestesia, radiônica, geometria sagrada e outras técnicas energéticas em uma abordagem sutil e integrativa.
               </p>
             </div>
-            <span className="text-xs text-emerald-400 font-light mt-4 pt-4 border-t border-emerald-900/40">
+            <span className="text-xs text-emerald-400 font-light mt-4 pt-3 border-t border-emerald-900/40">
               Metodologia estruturada
             </span>
           </div>
 
-          <div className="p-7 rounded-3xl bg-[#142620] border border-emerald-900/40 shadow-lg hover:border-emerald-500/40 transition-all flex flex-col justify-between">
-            <div className="space-y-4">
-              <div className="w-12 h-12 rounded-2xl bg-emerald-950/80 border border-emerald-500/30 text-emerald-400 flex items-center justify-center">
-                <WifiOff className="w-6 h-6" />
+          {/* Card 2 */}
+          <div className="p-6 rounded-3xl bg-[#142620] border border-emerald-900/40 shadow-lg hover:border-emerald-500/40 transition-all flex flex-col justify-between">
+            <div className="space-y-3">
+              <div className="w-11 h-11 rounded-2xl bg-emerald-950/80 border border-emerald-500/30 text-emerald-400 flex items-center justify-center">
+                <WifiOff className="w-5 h-5" />
               </div>
-              <h3 className="text-xl font-light text-stone-100">
+              <h3 className="text-lg font-light text-stone-100">
                 100% a Distância e Offline
               </h3>
-              <p className="text-sm text-stone-300 font-light leading-relaxed">
+              <p className="text-xs sm:text-sm text-stone-300 font-light leading-relaxed">
                 Tudo acontece a distância, sem a necessidade de você permanecer conectado(a) ou interromper suas atividades durante o procedimento.
               </p>
             </div>
-            <span className="text-xs text-emerald-400 font-light mt-4 pt-4 border-t border-emerald-900/40">
+            <span className="text-xs text-emerald-400 font-light mt-4 pt-3 border-t border-emerald-900/40">
               Praticidade e conforto total
             </span>
           </div>
 
-          <div className="p-7 rounded-3xl bg-[#142620] border border-emerald-900/40 shadow-lg hover:border-emerald-500/40 transition-all flex flex-col justify-between">
-            <div className="space-y-4">
-              <div className="w-12 h-12 rounded-2xl bg-emerald-950/80 border border-emerald-500/30 text-emerald-400 flex items-center justify-center">
-                <FileText className="w-6 h-6" />
+          {/* Card 3: Limpeza, Selamento, Alinhamento e Harmonização */}
+          <div className="p-6 rounded-3xl bg-[#142620] border border-emerald-900/40 shadow-lg hover:border-emerald-500/40 transition-all flex flex-col justify-between">
+            <div className="space-y-3">
+              <div className="w-11 h-11 rounded-2xl bg-emerald-950/80 border border-emerald-500/30 text-emerald-400 flex items-center justify-center">
+                <Layers className="w-5 h-5" />
               </div>
-              <h3 className="text-xl font-light text-stone-100">
-                Limpeza, Selamento & Devolutiva
+              <h3 className="text-lg font-light text-stone-100">
+                Limpeza, Selamento, Alinhamento e Harmonização
               </h3>
-              <p className="text-sm text-stone-300 font-light leading-relaxed">
-                O processo inclui análise radiestésica, aplicação das práticas, selamento do campo e um relatório completo com orientações de integração.
+              <p className="text-xs sm:text-sm text-stone-300 font-light leading-relaxed">
+                Aplicação das práticas previstas para trabalhar simbolicamente os corpos sutis, limpar interferências, alinhar e selar o campo energético.
               </p>
             </div>
-            <span className="text-xs text-emerald-400 font-light mt-4 pt-4 border-t border-emerald-900/40">
-              Relatório individualizado
+            <span className="text-xs text-emerald-400 font-light mt-4 pt-3 border-t border-emerald-900/40">
+              Equilíbrio e proteção sutil
+            </span>
+          </div>
+
+          {/* Card 4: Devolutiva */}
+          <div className="p-6 rounded-3xl bg-[#142620] border border-emerald-900/40 shadow-lg hover:border-emerald-500/40 transition-all flex flex-col justify-between">
+            <div className="space-y-3">
+              <div className="w-11 h-11 rounded-2xl bg-emerald-950/80 border border-emerald-500/30 text-emerald-400 flex items-center justify-center">
+                <FileText className="w-5 h-5" />
+              </div>
+              <h3 className="text-lg font-light text-stone-100">
+                Devolutiva
+              </h3>
+              <p className="text-xs sm:text-sm text-stone-300 font-light leading-relaxed">
+                Relatório completo de sua situação energética com orientações de integração para o seu dia a dia.
+              </p>
+            </div>
+            <span className="text-xs text-emerald-400 font-light mt-4 pt-3 border-t border-emerald-900/40">
+              Orientação personalizada
             </span>
           </div>
 

@@ -5,41 +5,39 @@ import { openWhatsApp } from '../utils/whatsapp';
 export const PackageComparisonSection: React.FC = () => {
   const tiers = [
     {
-      name: 'Pacote Completo',
-      badge: 'Popular & Abrangente',
-      price: 'R$ 165,00',
-      installments: '3x de R$ 55,00',
-      focus: 'Para quem deseja explorar um conjunto ampliado de práticas energéticas voltadas a objetivos pessoais e à experiência familiar.',
+      name: 'Pacote Essencial',
+      badge: 'Harmonização Fundamental',
+      price: 'R$ 182,88',
+      installments: '3x de R$ 64,17',
+      focus: 'Para quem deseja vivenciar as práticas fundamentais de investigação radiestésica, apometria, blindagem e desbloqueio pessoal.',
       features: [
         'Protocolo de Varredura e Desobstrução',
         'Mapeamento dos 7 Chakras e Leitura da Aura',
         'Tratamento Multidimensional — Apometria Radiestésica',
-        'Radiestesia Gráfica de Blindagem (6 gráficos)',
+        'Radiestesia Gráfica de Blindagem (6 gráficos de proteção)',
         'Harmonização do Campo pessoal e ambiental',
         'Desbloqueio de Caminhos e Ativação da Chama Trina',
-        'Harmonização Astrológica Quântica (10 arquétipos)',
-        'Direcionamento de Metas e Objetivos',
-        'Expansão de Frequência Familiar',
-        'Limpeza, Selamento e Relatório de Devolutiva'
+        'Limpeza, Selamento, Alinhamento e Harmonização',
+        'Relatório de Devolutiva individual'
       ],
-      actionText: 'Escolher Pacote Completo',
-      planId: 'completo' as const,
+      actionText: 'Escolher Pacote Essencial',
+      planId: 'essencial' as const,
       isPopular: false
     },
     {
       name: 'Pacote Master',
       badge: 'Mais Completo & Aprofundado',
-      price: 'R$ 230,00',
-      installments: '3x de R$ 76,67',
-      focus: 'Para quem deseja conhecer o conjunto mais abrangente da Pranion, incluindo procedimentos voltados à vida afetiva e ao autoconhecimento espiritual.',
+      price: 'R$ 256,30',
+      installments: '3x de R$ 89,67',
+      focus: 'Para quem deseja conhecer o conjunto mais abrangente da Pranion, incluindo procedimentos dedicados à harmonia das relações e do ambiente familiar.',
       features: [
-        'Tudo incluso no Pacote Completo',
+        'Tudo incluso no Pacote Essencial',
         'Desbloqueio de Caminhos e Chama Trina Aprofundada',
-        'Harmonização Astrológica Quântica Ampliada',
-        'Sintonia de Relações — Soulmate Matching (639 Hz)',
+        'Harmonização Astrológica Quântica (10 arquétipos)',
+        'Expansão de Frequência Familiar (convivência e dinâmica)',
+        'Sintonia de Relações (Frequência de 639 Hz para todas as relações)',
         'Ajuste do Código da Vida e Healing Universal',
-        'Foco em merecimento, coragem e paz interior',
-        'Limpeza profunda, Selamento e Relatório Completo'
+        'Limpeza profunda, Selamento, Alinhamento e Relatório Completo'
       ],
       actionText: 'Escolher Pacote Master',
       planId: 'vip_master' as const,
@@ -48,14 +46,14 @@ export const PackageComparisonSection: React.FC = () => {
   ];
 
   return (
-    <section className="w-full bg-[#ffffff] text-stone-900 py-18 md:py-24 border-b border-stone-200">
+    <section id="comparativo" className="w-full bg-[#ffffff] text-stone-900 py-18 md:py-24 border-b border-stone-200">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
         <div className="max-w-3xl mx-auto text-center space-y-4 mb-14">
           <span className="text-xs uppercase tracking-widest text-emerald-800 font-medium bg-emerald-100/70 px-3.5 py-1.5 rounded-full border border-emerald-300/60 inline-flex items-center gap-1.5">
             <HelpCircle className="w-3.5 h-3.5 text-emerald-700" />
-            Guia de Escolha
+            Guia de Escolha Comparativo
           </span>
 
           <h2 className="text-3xl sm:text-4xl font-light text-stone-950 tracking-tight font-serif-title">
@@ -63,7 +61,7 @@ export const PackageComparisonSection: React.FC = () => {
           </h2>
 
           <p className="text-base sm:text-lg text-stone-600 font-light leading-relaxed">
-            Compare o que cada modalidade inclui e escolha a que melhor atende ao seu momento.
+            Compare o que cada modalidade inclui e escolha com liberdade a experiência ideal para o seu momento.
           </p>
         </div>
 
@@ -97,7 +95,7 @@ export const PackageComparisonSection: React.FC = () => {
                 <div className="mb-4 pt-1">
                   <div className="flex items-baseline gap-2">
                     <span className="text-3xl font-normal text-emerald-800">{tier.price}</span>
-                    <span className="text-xs text-stone-500 font-light">à vista</span>
+                    <span className="text-xs text-stone-500 font-light">à vista (PIX 5% off)</span>
                   </div>
                   <span className="text-xs text-stone-500 block mt-0.5">ou em até {tier.installments} no cartão</span>
                 </div>

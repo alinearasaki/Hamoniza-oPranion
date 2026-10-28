@@ -6,17 +6,17 @@ export const FB_PIXEL_ID = '2199931540919649';
 export const YOUTUBE_SHORT_ID = '-bhBA9ozraQ';
 
 export const PLANS: Record<string, PlanDetails> = {
-  completo: {
-    id: 'completo',
-    title: 'PACOTE COMPLETO DE HARMONIZAÇÃO',
-    subtitle: 'Para quem deseja explorar um conjunto ampliado de práticas energéticas.',
-    badge: 'Popular & Abrangente',
-    description: 'Além das práticas fundamentais, esta modalidade acrescenta procedimentos voltados a objetivos pessoais e à experiência familiar.',
+  essencial: {
+    id: 'essencial',
+    title: 'PACOTE ESSENCIAL DE HARMONIZAÇÃO',
+    subtitle: 'Para quem deseja vivenciar as práticas fundamentais e personalizadas de harmonização energética.',
+    badge: 'Essencial & Equilíbrio',
+    description: 'Um cuidado profundo com práticas integrativas dedicadas ao alinhamento do campo pessoal, desbloqueio e proteção sutil.',
     originalPrice: 'R$ 275,00',
-    promotionalPrice: 'R$ 165,00',
-    installmentText: 'em até 3x de R$ 55,00 sem juros no cartão ou via PIX à vista',
-    cashPrice: 'R$ 165,00',
-    ctaText: 'QUERO CONHECER O PACOTE COMPLETO',
+    promotionalPrice: 'R$ 182,88',
+    installmentText: 'à vista no PIX (com 5% de desconto) ou em até 3x de R$ 64,17 no cartão',
+    cashPrice: 'R$ 182,88',
+    ctaText: 'QUERO O PACOTE ESSENCIAL',
     includes: [
       {
         title: 'Protocolo de Varredura e Desobstrução',
@@ -41,37 +41,25 @@ export const PLANS: Record<string, PlanDetails> = {
       {
         title: 'Desbloqueio de Caminhos e Ativação da Chama Trina',
         description: 'Prática simbólica baseada nos conceitos de poder, sabedoria e amor incondicional.'
-      },
-      {
-        title: 'Harmonização Astrológica Quântica',
-        description: 'Trabalho com dez arquétipos planetários, conforme a metodologia Pranion, para explorar simbolicamente temas como intelecto, autoridade, escolhas e objetivos pessoais.'
-      },
-      {
-        title: 'Direcionamento de Objetivos',
-        description: 'Prática de alinhamento energético simbólico relacionada às metas que você deseja trabalhar.'
-      },
-      {
-        title: 'Expansão de Frequência Familiar',
-        description: 'Prática energética direcionada simbolicamente à dinâmica do ambiente familiar e das relações de convívio, conforme o escopo contratado.'
       }
     ],
-    extraIncluded: 'Você também recebe: os itens de limpeza, selamento e devolutiva previstos na oferta.',
-    disclaimer: 'As práticas são complementares e não garantem mudanças na vida familiar, na prosperidade ou na realização de objetivos.'
+    extraIncluded: 'Você também recebe: limpeza, selamento, alinhamento, harmonização e o relatório de devolutiva.',
+    disclaimer: 'As práticas são complementares e não garantem diagnósticos médicos ou alterações em acontecimentos externos.'
   },
   vip_master: {
     id: 'vip_master',
     title: 'PACOTE MASTER DE HARMONIZAÇÃO',
     subtitle: 'Uma experiência ampliada para quem deseja conhecer o conjunto mais abrangente da Pranion.',
     badge: 'Mais Completo & Aprofundado',
-    description: 'O pacote Master reúne os procedimentos dos níveis anteriores e acrescenta práticas relacionadas à vida afetiva, à intenção pessoal e ao autoconhecimento espiritual.',
+    description: 'O pacote Master reúne todos os procedimentos do nível Essencial e acrescenta práticas exclusivas de astrologia quântica, dinâmica familiar, sintonia de relações e autoconhecimento.',
     originalPrice: 'R$ 385,00',
-    promotionalPrice: 'R$ 230,00',
-    installmentText: 'em até 3x de R$ 76,67 sem juros no cartão ou via PIX à vista',
-    cashPrice: 'R$ 230,00',
-    ctaText: 'QUERO CONHECER O PACOTE MASTER',
+    promotionalPrice: 'R$ 256,30',
+    installmentText: 'à vista no PIX (com 5% de desconto) ou em até 3x de R$ 89,67 no cartão',
+    cashPrice: 'R$ 256,30',
+    ctaText: 'QUERO O PACOTE MASTER',
     includes: [
       {
-        title: 'Práticas completas dos níveis anteriores',
+        title: 'Práticas completas do Pacote Essencial',
         description: 'Varredura, análise de chakras e aura, apometria radiestésica, blindagem com 6 gráficos e harmonização do campo pessoal e ambiental.'
       },
       {
@@ -79,20 +67,24 @@ export const PLANS: Record<string, PlanDetails> = {
         description: 'Prática simbólica que trabalha os conceitos arquetípicos de poder, sabedoria e amor incondicional.'
       },
       {
-        title: 'Harmonização Astrológica Quântica Ampliada',
-        description: 'Exploração minuciosa dos dez arquétipos planetários utilizados pela metodologia Pranion.'
+        title: 'Harmonização Astrológica Quântica',
+        description: 'Trabalho detalhado com os dez arquétipos planetários para explorar simbolicamente temas como intelecto, autoridade, escolhas e metas pessoais.'
       },
       {
-        title: 'Sintonia de Relações — Soulmate Matching',
-        description: 'Prática simbólica que utiliza a frequência de 639 Hz, associada à proposta de harmonização de relações e conexões afetivas.'
+        title: 'Expansão de Frequência Familiar',
+        description: 'Prática energética direcionada simbolicamente à dinâmica do ambiente familiar e à harmonia das relações de convívio.'
+      },
+      {
+        title: 'Sintonia de Relações (Frequência de 639 Hz)',
+        description: 'Prática integrativa associada à frequência de 639 Hz, voltada ao alinhamento harmônico de todas as relações interpessoais, afetivas e de convivência do cliente.'
       },
       {
         title: 'Ajuste do Código da Vida e Healing Universal',
         description: 'Prática integrativa orientada por temas como merecimento, coragem, autoconhecimento e paz interior.'
       }
     ],
-    extraIncluded: 'Você também recebe: os itens de limpeza, selamento e devolutiva previstos no pacote.',
-    disclaimer: 'Esta modalidade não garante a atração de um parceiro, a reconciliação de relacionamentos, a prosperidade financeira ou mudanças específicas na vida pessoal.'
+    extraIncluded: 'Você também recebe: limpeza profunda, selamento, alinhamento, harmonização e o relatório de devolutiva completo.',
+    disclaimer: 'Esta modalidade é uma prática integrativa complementar e não substitui acompanhamento médico, psicológico ou terapêutico.'
   }
 };
 
@@ -121,13 +113,13 @@ export const HOW_IT_WORKS_STEPS = [
   {
     step: 'ETAPA 3',
     title: 'LIMPEZA E SELAMENTO',
-    description: 'Os pacotes incluem as práticas de limpeza e selamento do campo energético previstas na proposta de atendimento.',
+    description: 'Os pacotes incluem as práticas de limpeza, selamento, alinhamento e harmonização do campo energético previstas na proposta de atendimento.',
     note: 'O conjunto de técnicas varia conforme o pacote escolhido.'
   },
   {
     step: 'ETAPA 4',
     title: 'RELATÓRIO DE DEVOLUTIVA',
-    description: 'Após o atendimento, você recebe um relatório com a devolutiva do processo e orientações simples para integrar a experiência à sua rotina.',
+    description: 'Após o atendimento, você recebe um relatório completo de sua situação energética com orientações de integração para sua rotina.',
     note: 'Caso seja pertinente à abordagem utilizada, o relatório poderá indicar a possibilidade de um novo atendimento, sem obrigação de continuidade.'
   }
 ];
@@ -180,11 +172,11 @@ export const FAQ_ITEMS = [
   },
   {
     question: 'Como sei qual pacote escolher?',
-    answer: 'Compare os itens das duas modalidades: o Pacote Completo reúne o conjunto ampliado de práticas voltadas a objetivos pessoais e à dimensão familiar; já o Pacote Master é o mais abrangente e aprofundado, incluindo também procedimentos dedicados à dimensão afetiva (Sintonia de Relações 639 Hz), intenção pessoal e autoconhecimento espiritual.'
+    answer: 'Compare os itens das duas modalidades: o Pacote Essencial reúne as práticas fundamentais de varredura, mapeamento dos chakras, apometria radiestésica, blindagem gráfica e harmonização de campo; já o Pacote Master é o mais abrangente e aprofundado, incluindo também a harmonização astrológica, a expansão familiar, a sintonia de relações (639 Hz) e o ajuste do código da vida.'
   },
   {
     question: 'Receberei algum material após o atendimento?',
-    answer: 'Sim. Os pacotes descritos incluem um relatório de devolutiva, conforme a modalidade contratada, com informações sobre as práticas realizadas e orientações de integração.'
+    answer: 'Sim. Os pacotes descritos incluem um relatório completo de sua situação energética com orientações de integração para sua rotina, conforme a modalidade contratada.'
   },
   {
     question: 'Quantas sessões são necessárias?',
@@ -204,10 +196,6 @@ export const FAQ_ITEMS = [
   },
   {
     question: 'Como funciona o pagamento?',
-    answer: 'O pagamento pode ser parcelado em até 3x no cartão de crédito ou à vista no PIX.'
-  },
-  {
-    question: 'Como funciona o suporte?',
-    answer: 'Você pode entrar em contato conosco pelo WhatsApp oficial (55 11 98877-7061) em caso de qualquer dúvida ou desconforto.'
+    answer: 'O pagamento pode ser feito à vista no PIX com 5% de desconto promocional ou parcelado em até 3x no cartão de crédito.'
   }
 ];

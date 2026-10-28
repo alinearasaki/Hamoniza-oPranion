@@ -63,7 +63,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenCheckout }) => {
                   <div className="text-left sm:text-right">
                     <span className="text-xs text-stone-400 line-through block">De R$ 275,00</span>
                     <span className="text-xl sm:text-2xl font-light text-emerald-300">
-                      A partir de 3x R$ 55,00
+                      A partir de R$ 182,88
+                    </span>
+                    <span className="text-[11px] text-stone-400 block font-light">
+                      ou em até 3x de R$ 64,17
                     </span>
                   </div>
                 </div>
@@ -92,7 +95,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenCheckout }) => {
                     <ShieldCheck className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
                     Atendimento seguro & confidencial
                   </span>
-                  <span>Parcelamento em até 3x ou PIX</span>
+                  <span>3x no cartão ou PIX (5% off)</span>
                 </div>
               </div>
             </div>

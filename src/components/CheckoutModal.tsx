@@ -9,12 +9,12 @@ interface CheckoutModalProps {
   onClose: () => void;
 }
 
-export const CheckoutModal: React.FC<CheckoutModalProps> = ({ initialPlan = 'completo', onClose }) => {
+export const CheckoutModal: React.FC<CheckoutModalProps> = ({ initialPlan = 'essencial', onClose }) => {
   const [selectedPlan, setSelectedPlan] = useState<PlanTier>(initialPlan);
   const [clientName, setClientName] = useState('');
   const [notes, setNotes] = useState('');
 
-  const currentPlan = PLANS[selectedPlan] || PLANS.completo;
+  const currentPlan = PLANS[selectedPlan] || PLANS.essencial;
 
   const handleProceedToWhatsApp = () => {
     let msg = `Olá Aline! Gostaria de agendar o ${currentPlan.title} (${currentPlan.promotionalPrice}).`;
@@ -24,7 +24,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ initialPlan = 'com
     if (notes.trim()) {
       msg += ` Gostaria de priorizar no atendimento: ${notes.trim()}.`;
     }
-    msg += ` Poderia me informar as próximas datas disponíveis na agenda e o link de pagamento?`;
+    msg += ` Poderia me informar as próximas datas disponíveis na agenda e o link de pagamento seguro?`;
 
     openWhatsApp(selectedPlan, msg);
     onClose();
@@ -46,7 +46,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ initialPlan = 'com
         {/* Modal Header */}
         <div className="space-y-1 mb-6">
           <span className="text-xs uppercase tracking-wider text-emerald-400 font-light">
-            Agendamento Rápido
+            Agendamento Consciente
           </span>
           <h3 className="text-2xl font-light font-serif-title text-stone-50">
             Confirmar Atendimento
@@ -60,21 +60,21 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ initialPlan = 'com
         <div className="grid grid-cols-2 gap-3 mb-6">
           <button
             type="button"
-            onClick={() => setSelectedPlan('completo')}
+            onClick={() => setSelectedPlan('essencial')}
             className={`p-4 rounded-2xl border text-left transition-all ${
-              selectedPlan === 'completo'
+              selectedPlan === 'essencial'
                 ? 'bg-emerald-950/80 border-emerald-500 text-white shadow-md'
                 : 'bg-stone-900/60 border-stone-800 text-stone-400 hover:text-stone-200'
             }`}
           >
             <span className="text-[10px] uppercase tracking-wider block text-emerald-400 font-medium">
-              Completo
+              Essencial
             </span>
             <span className="text-sm font-normal block text-stone-100 mt-1">
-              R$ 165,00
+              R$ 182,88
             </span>
             <span className="text-[11px] text-stone-400 font-light block">
-              3x de R$ 55,00
+              3x de R$ 64,17
             </span>
           </button>
 
@@ -91,10 +91,10 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ initialPlan = 'com
               Master (Mais Completo)
             </span>
             <span className="text-sm font-normal block text-stone-100 mt-1">
-              R$ 230,00
+              R$ 256,30
             </span>
             <span className="text-[11px] text-stone-400 font-light block">
-              3x de R$ 76,67
+              3x de R$ 89,67
             </span>
           </button>
         </div>
@@ -111,7 +111,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ initialPlan = 'com
           </div>
           <div className="flex items-center justify-between text-xs">
             <span className="text-stone-400">Condições:</span>
-            <span className="text-stone-300">Até 3x no cartão ou via PIX</span>
+            <span className="text-stone-300">5% off no PIX ou em até 3x no cartão</span>
           </div>
         </div>
 
@@ -156,7 +156,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ initialPlan = 'com
 
           <div className="flex items-center justify-center gap-2 text-[11px] text-stone-400 text-center">
             <ShieldCheck className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
-            <span>Atendimento individual, confidencial e realizado a distância.</span>
+            <span>Garantia de 7 dias e atendimento individualizado.</span>
           </div>
         </div>
 

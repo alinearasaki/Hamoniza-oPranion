@@ -1,7 +1,6 @@
 import React from 'react';
-import { MessageCircle, Clock, CheckCircle2, ShieldAlert, Sparkles } from 'lucide-react';
+import { MessageCircle, ShieldCheck, ShieldAlert, Sparkles, CheckCircle2 } from 'lucide-react';
 import { openWhatsApp } from '../utils/whatsapp';
-import { WHATSAPP_DISPLAY } from '../data';
 
 export const SupportAndLegalSection: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -10,19 +9,19 @@ export const SupportAndLegalSection: React.FC = () => {
     <footer id="suporte" className="w-full bg-[#08100e] text-stone-300 py-16 md:py-20 border-t border-stone-800">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-14">
         
-        {/* Row 1: 17. Acessibilidade + 18. Suporte ao Cliente */}
+        {/* Row: Acessibilidade + Garantia Incondicional de 7 Dias */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           
-          {/* 17. Acessibilidade e Compatibilidade */}
+          {/* Acessibilidade e Compatibilidade */}
           <div className="p-7 rounded-3xl bg-[#0e1c17] border border-emerald-900/40 space-y-4">
             <span className="text-xs uppercase tracking-wider text-emerald-400 font-light block">
-              17. Acessibilidade e Compatibilidade
+              Acessibilidade & Formato
             </span>
             <h3 className="text-xl font-light text-stone-100 font-serif-title">
               Condições do Atendimento
             </h3>
             <p className="text-xs sm:text-sm text-stone-300 font-light leading-relaxed">
-              A harmonização energética da Pranion é realizada a distância, com agendamento prévio. Para contratar, você precisa ter acesso ao canal de contato indicado e conseguir receber o relatório de devolutiva no formato disponibilizado.
+              A harmonização energética da Pranion é realizada a distância, com agendamento prévio. Para contratar, você precisa apenas ter acesso ao WhatsApp para receber o seu relatório de devolutiva.
             </p>
 
             <ul className="space-y-2 text-xs text-stone-400 font-light pt-2">
@@ -53,45 +52,44 @@ export const SupportAndLegalSection: React.FC = () => {
             </p>
           </div>
 
-          {/* 18. Suporte ao Cliente */}
-          <div className="p-7 rounded-3xl bg-[#0e1c17] border border-emerald-900/40 space-y-4 flex flex-col justify-between">
-            <div>
-              <span className="text-xs uppercase tracking-wider text-emerald-400 font-light block">
-                18. Suporte Oficial ao Cliente
-              </span>
-              <h3 className="text-xl font-light text-stone-100 font-serif-title">
-                Estamos aqui para ajudar
-              </h3>
-              <p className="text-xs sm:text-sm text-stone-300 font-light leading-relaxed">
-                Em caso de dúvidas sobre os pacotes, agendamento, pagamento ou recebimento do relatório, utilize o canal oficial da Pranion.
-              </p>
-
-              <div className="p-4 rounded-2xl bg-stone-950/80 border border-stone-800/80 my-4 space-y-2 text-xs">
-                <div className="flex items-center justify-between">
-                  <span className="text-stone-400">Canal de atendimento:</span>
-                  <span className="text-emerald-400 font-medium">WhatsApp {WHATSAPP_DISPLAY}</span>
+          {/* Garantia Incondicional de 7 Dias (Substituindo o quadro de suporte) */}
+          <div className="p-7 rounded-3xl bg-gradient-to-b from-[#11241e] via-[#0e1c17] to-[#0a1512] border-2 border-emerald-500/40 space-y-4 flex flex-col justify-between shadow-xl">
+            <div className="space-y-3">
+              <div className="flex items-center gap-2">
+                <div className="w-10 h-10 rounded-2xl bg-emerald-950 border border-emerald-500/40 text-emerald-400 flex items-center justify-center shrink-0">
+                  <ShieldCheck className="w-5 h-5 text-emerald-400" />
                 </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-stone-400">Horário de suporte:</span>
-                  <span className="text-stone-200">das 08:00 às 20:00</span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-stone-400">Prazo de resposta:</span>
-                  <span className="text-stone-200">normalmente em até 24 horas</span>
+                <div>
+                  <span className="text-xs uppercase tracking-wider text-emerald-400 font-light block">
+                    Segurança & Risco Zero
+                  </span>
+                  <h3 className="text-xl font-light text-stone-100 font-serif-title">
+                    Garantia Incondicional de 7 Dias
+                  </h3>
                 </div>
               </div>
 
-              <p className="text-[11px] text-stone-400 font-light">
-                O suporte é destinado a dúvidas sobre a contratação e a execução do serviço. Não substitui atendimento médico ou psicológico.
+              <p className="text-xs sm:text-sm text-stone-300 font-light leading-relaxed">
+                A sua tranquilidade e confiança vêm em primeiro lugar. Se por qualquer motivo você se arrepender da contratação no prazo de até <strong>7 dias</strong> a contar da confirmação do pagamento, basta nos enviar uma mensagem no WhatsApp.
               </p>
+
+              <div className="p-4 rounded-2xl bg-stone-950/80 border border-emerald-900/60 text-xs text-stone-300 font-light space-y-1.5">
+                <div className="flex items-center gap-2 text-emerald-400 font-normal">
+                  <CheckCircle2 className="w-4 h-4 shrink-0" />
+                  <span>Devolução de 100% do seu investimento</span>
+                </div>
+                <p className="text-[11px] text-stone-400 leading-relaxed">
+                  Sem burocracias, justificativas ou constrangimentos. O reembolso é realizado de forma simples e transparente.
+                </p>
+              </div>
             </div>
 
             <button
-              onClick={() => openWhatsApp(undefined, 'Olá! Gostaria de falar com o suporte oficial da Pranion.')}
+              onClick={() => openWhatsApp(undefined, 'Olá Aline! Gostaria de tirar dúvidas sobre o atendimento da Pranion.')}
               className="cursor-pointer w-full inline-flex items-center justify-center gap-2 py-3 px-5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-stone-950 text-xs sm:text-sm font-medium transition-all shadow-md active:scale-98"
             >
               <MessageCircle className="w-4 h-4 fill-stone-950" />
-              <span>Falar com o Suporte no WhatsApp</span>
+              <span>Conversar com a Aline no WhatsApp</span>
             </button>
           </div>
 
