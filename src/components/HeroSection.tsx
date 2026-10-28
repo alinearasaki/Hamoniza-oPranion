@@ -1,7 +1,7 @@
 import React from 'react';
 import { ArrowRight, MessageCircle, Sparkles, Play, ShieldCheck, Heart } from 'lucide-react';
 import { openWhatsApp } from '../utils/whatsapp';
-import heroImage from '../assets/images/pranion_hero_harmony_1792943954610.jpg';
+import heroImage from '../assets/images/aline_meditando.png';
 
 interface HeroSectionProps {
   onOpenCheckout: (plan?: any) => void;
@@ -114,8 +114,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenCheckout }) => {
             <div className="relative w-full max-w-md rounded-3xl overflow-hidden shadow-2xl border border-stone-800/90 bg-[#101b18] group">
               <img
                 src={heroImage}
-                alt="Pessoa em estado sereno de harmonia e bem-estar interior - Pranion Harmonização Energética"
-                className="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-700"
+                alt="Aline Augusta Arasaki meditando em serenidade - Pranion Harmonização Energética"
+                className="w-full h-[440px] sm:h-[460px] object-cover object-top group-hover:scale-103 transition-transform duration-700"
               />
               
               <div className="absolute inset-0 bg-gradient-to-t from-[#09120f] via-transparent to-transparent opacity-80" />

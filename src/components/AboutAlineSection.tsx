@@ -1,6 +1,6 @@
 import React from 'react';
 import { Award, BookOpen, Heart, Sparkles, ShieldCheck } from 'lucide-react';
-import alinePhoto from '../assets/images/aline_terapeuta_1792943967773.jpg';
+import alinePhoto from '../assets/images/aline_augusta_arasaki.png';
 
 export const AboutAlineSection: React.FC = () => {
   const credentials = [
@@ -18,13 +18,13 @@ export const AboutAlineSection: React.FC = () => {
           
           {/* Photo Column */}
           <div className="lg:col-span-5 flex justify-center">
-            <div className="relative w-full max-w-sm rounded-3xl overflow-hidden shadow-xl border border-stone-300/80 bg-white group">
+            <div className="relative w-full max-w-sm rounded-3xl overflow-hidden shadow-2xl border border-stone-300/80 bg-white group">
               <img
                 src={alinePhoto}
-                alt="Aline Augusta Arasaki - Terapeuta Integrativa e Criadora da Pranion"
-                className="w-full h-[430px] object-cover group-hover:scale-102 transition-transform duration-500"
+                alt="Aline Augusta Arasaki - Criadora e Terapeuta da Pranion"
+                className="w-full h-[460px] sm:h-[490px] object-cover object-top group-hover:scale-102 transition-transform duration-500"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-stone-950/70 via-transparent to-transparent opacity-80" />
+              <div className="absolute inset-0 bg-gradient-to-t from-stone-950/80 via-stone-950/20 to-transparent" />
               
               <div className="absolute bottom-4 left-4 right-4 text-white">
                 <span className="text-xs uppercase tracking-wider text-emerald-300 font-light block">
